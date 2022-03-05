@@ -36,6 +36,7 @@ else()
     CONFIGURE_COMMAND ""
     BUILD_COMMAND     ""
     INSTALL_COMMAND   "")
+  add_dependencies(lief_pybind11 lief_pybind11_project)
   ExternalProject_get_property(lief_pybind11_project SOURCE_DIR)
   target_include_directories(lief_pybind11 SYSTEM INTERFACE "${SOURCE_DIR}/include")
 endif()
